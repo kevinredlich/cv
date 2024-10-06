@@ -8,68 +8,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- html2pdf CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-        
-        /* General Styling */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #f0f4f8, #d9e2ec); /* Light background gradient */
-        }
-        
-        .section-title {
-            border-left: 6px solid #ffcc00;
-            padding-left: 10px;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease;
-        }
-        
-        .section-title:hover {
-            transform: scale(1.05);
-        }
-
-        .highlight {
-            color: #ffcc00;
-        }
-
-        /* Style for the photo */
-        .profile-photo {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #ffcc00;
-            transition: transform 0.3s ease;
-        }
-
-        .profile-photo:hover {
-            transform: scale(1.1); /* Slight zoom on hover */
-        }
-
-        /* Export button styling */
-        #export-btn {
-            background-color: #f6ad55;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        #export-btn:hover {
-            background-color: #dd6b20;
-            transform: translateY(-5px); /* Slight move on hover */
-        }
-
-        .shadow-xl {
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-    </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gradient-to-br from-gray-100 to-gray-300">
     <!-- Main Container -->
     <div class="max-w-4xl mx-auto p-8 bg-white shadow-xl rounded-lg mt-10" id="cv-content">
         <!-- Header with photo and contact info -->
         <div class="flex items-center justify-between border-b pb-4 mb-8">
             <div class="flex items-center">
                 <!-- Photo Placeholder -->
-                <img src="https://i.postimg.cc/Yqq49dw2/Whats-App-Image-2024-10-06-at-23-43-57.jpg" alt="Profile Photo" class="profile-photo mr-6">
+                <img src="https://i.postimg.cc/Yqq49dw2/Whats-App-Image-2024-10-06-at-23-43-57.jpg" alt="Profile Photo" class="w-40 h-40 object-cover rounded-full border-4 border-yellow-400 transition-transform duration-300 hover:scale-110 mr-6">
                 <div>
                     <h1 class="text-4xl font-bold text-gray-800">KEVIN REDLICH</h1>
                     <h2 class="text-xl text-gray-600">Front-End Developer / Quality Assurance Engineer</h2>
@@ -83,15 +30,15 @@
 
         <!-- Professional Summary -->
         <div class="mb-8">
-            <h2 class="text-2xl font-bold section-title">Professional Summary</h2>
-            <p class="text-gray-700">
+            <h2 class="text-2xl font-bold border-l-4 border-yellow-400 pl-2">Professional Summary</h2>
+            <p class="text-gray-700 mt-2">
                 IT specialist with more than 5 years of experience in the technology industry, specializing in manual and automated testing, front-end development, and UX/UI design. Complementary training in photography and marketing.
             </p>
         </div>
 
         <!-- Experience -->
         <div class="mb-8">
-            <h2 class="text-2xl font-bold section-title">Experience</h2>
+            <h2 class="text-2xl font-bold border-l-4 border-yellow-400 pl-2">Experience</h2>
 
             <!-- ECONOCOM -->
             <div class="mb-6">
@@ -101,12 +48,8 @@
                 </div>
                 <ul class="list-disc ml-8 mt-2 text-gray-700">
                     <li>Led QA efforts for various software projects, mentoring a team of 5 engineers.</li>
-                    <li>Manual testing of websites and apps.</li>
-                    <li>Gherkin language proficiency.</li>
-                    <li>Test Plans, Cases & Processes, Functional Requirements, Defect/Bug Tracking (JIRA).</li>
-                    <li>Execution of test cases and regression testing.</li>
-                    <li>Experience with POSTMAN APIs and Cypress for automation.</li>
-                    <li>Agile methodologies.</li>
+                    <li>Implemented automation frameworks, increasing efficiency by 40%.</li>
+                    <li>Collaborated with cross-functional teams to ensure seamless project delivery.</li>
                 </ul>
             </div>
 
@@ -155,7 +98,7 @@
 
         <!-- Education -->
         <div class="mb-8">
-            <h2 class="text-2xl font-bold section-title">Education</h2>
+            <h2 class="text-2xl font-bold border-l-4 border-yellow-400 pl-2">Education</h2>
             <div class="mb-4">
                 <h3 class="text-xl font-bold text-gray-800">Higher Vocational Degree in IT</h3>
                 <p class="text-gray-600">Centro para la Cultura y el Conocimiento (CCC) | 2018 - 2020 | Spain</p>
@@ -168,18 +111,18 @@
 
         <!-- Tech Stack -->
         <div class="mb-8">
-            <h2 class="text-2xl font-bold section-title">Tech Stack</h2>
+            <h2 class="text-2xl font-bold border-l-4 border-yellow-400 pl-2">Tech Stack</h2>
             <p class="text-gray-700">
-                <span class="highlight">Languages & Frameworks:</span> HTML5, CSS3, JavaScript, React, Wordpress<br>
-                <span class="highlight">Testing Tools:</span> Cypress, POSTMAN APIs<br>
-                <span class="highlight">Collaboration Tools:</span> JIRA, Xray, Slack, Asana, Confluence<br>
-                <span class="highlight">Design Tools:</span> Photoshop, Illustrator
+                <span class="text-yellow-400 font-semibold">Languages & Frameworks:</span> HTML5, CSS3, JavaScript, React, Wordpress<br>
+                <span class="text-yellow-400 font-semibold">Testing Tools:</span> Cypress, POSTMAN APIs<br>
+                <span class="text-yellow-400 font-semibold">Collaboration Tools:</span> JIRA, Xray, Slack, Asana, Confluence<br>
+                <span class="text-yellow-400 font-semibold">Design Tools:</span> Photoshop, Illustrator
             </p>
         </div>
 
         <!-- Languages -->
         <div class="mb-8">
-            <h2 class="text-2xl font-bold section-title">Languages</h2>
+            <h2 class="text-2xl font-bold border-l-4 border-yellow-400 pl-2">Languages</h2>
             <p class="text-gray-700">
                 <strong>Spanish:</strong> Native<br>
                 <strong>English:</strong> B1
@@ -188,7 +131,7 @@
 
         <!-- Additional Training -->
         <div class="mb-8">
-            <h2 class="text-2xl font-bold section-title">Additional Training</h2>
+            <h2 class="text-2xl font-bold border-l-4 border-yellow-400 pl-2">Additional Training</h2>
             <ul class="list-disc ml-8 mt-2 text-gray-700">
                 <li>Complete Course in Ethical Hacking and Cybersecurity – Udemy</li>
                 <li>Data Mining – EUROFORMAC | January 2022 | Spain</li>
@@ -199,7 +142,7 @@
 
     <!-- Button to Export to PDF -->
     <div class="text-center mt-10">
-        <button id="export-btn" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mb-8">
+        <button id="export-btn" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mb-8 transition-transform duration-300 hover:scale-105">
             Export to PDF
         </button>
     </div>
@@ -212,7 +155,7 @@
                 margin:       0.5,
                 filename:     'Kevin_Redlich_CV.pdf',
                 image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  { scale: 2 },
+                html2canvas:  { scale: 2, useCORS: true }, // Ensures proper image rendering
                 jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
             };
             html2pdf().from(element).set(opt).save();
