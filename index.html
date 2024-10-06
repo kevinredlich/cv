@@ -10,17 +10,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        /* General Styling */
         body {
             font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f0f4f8, #d9e2ec); /* Light background gradient */
         }
+        
         .section-title {
             border-left: 6px solid #ffcc00;
             padding-left: 10px;
             margin-bottom: 20px;
+            transition: transform 0.3s ease;
         }
+        
+        .section-title:hover {
+            transform: scale(1.05);
+        }
+
         .highlight {
             color: #ffcc00;
         }
+
         /* Style for the photo */
         .profile-photo {
             width: 200px;
@@ -28,12 +39,32 @@
             object-fit: cover;
             border-radius: 50%;
             border: 4px solid #ffcc00;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.1); /* Slight zoom on hover */
+        }
+
+        /* Export button styling */
+        #export-btn {
+            background-color: #f6ad55;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #export-btn:hover {
+            background-color: #dd6b20;
+            transform: translateY(-5px); /* Slight move on hover */
+        }
+
+        .shadow-xl {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
     </style>
 </head>
 <body class="bg-gray-50">
     <!-- Main Container -->
-    <div class="max-w-4xl mx-auto p-8 bg-white shadow-lg mt-10" id="cv-content">
+    <div class="max-w-4xl mx-auto p-8 bg-white shadow-xl rounded-lg mt-10" id="cv-content">
         <!-- Header with photo and contact info -->
         <div class="flex items-center justify-between border-b pb-4 mb-8">
             <div class="flex items-center">
@@ -41,7 +72,7 @@
                 <img src="https://i.postimg.cc/Yqq49dw2/Whats-App-Image-2024-10-06-at-23-43-57.jpg" alt="Profile Photo" class="profile-photo mr-6">
                 <div>
                     <h1 class="text-4xl font-bold text-gray-800">KEVIN REDLICH</h1>
-                    <h2 class="text-xl text-gray-600">Quality Assurance Engineer</h2>
+                    <h2 class="text-xl text-gray-600">Front-End Developer / Quality Assurance Engineer</h2>
                 </div>
             </div>
             <div class="text-right">
@@ -50,14 +81,11 @@
             </div>
         </div>
 
-        <!-- Professional Summary (Optional, use if concise and impactful) -->
+        <!-- Professional Summary -->
         <div class="mb-8">
             <h2 class="text-2xl font-bold section-title">Professional Summary</h2>
             <p class="text-gray-700">
-                Results-driven IT specialist with over 5 years of experience in manual and automated testing, 
-                front-end development, and UX/UI design. Proven ability to enhance project quality and efficiency through 
-                strategic QA processes. Adept at leading teams and implementing automation frameworks to improve productivity 
-                and reduce bugs in production.
+                IT specialist with more than 5 years of experience in the technology industry, specializing in manual and automated testing, front-end development, and UX/UI design. Complementary training in photography and marketing.
             </p>
         </div>
 
@@ -73,8 +101,12 @@
                 </div>
                 <ul class="list-disc ml-8 mt-2 text-gray-700">
                     <li>Led QA efforts for various software projects, mentoring a team of 5 engineers.</li>
-                    <li>Implemented automation frameworks, increasing efficiency by 40%.</li>
-                    <li>Collaborated with cross-functional teams to ensure seamless project delivery.</li>
+                    <li>Manual testing of websites and apps.</li>
+                    <li>Gherkin language proficiency.</li>
+                    <li>Test Plans, Cases & Processes, Functional Requirements, Defect/Bug Tracking (JIRA).</li>
+                    <li>Execution of test cases and regression testing.</li>
+                    <li>Experience with POSTMAN APIs and Cypress for automation.</li>
+                    <li>Agile methodologies.</li>
                 </ul>
             </div>
 
@@ -85,9 +117,12 @@
                     <p class="text-gray-600">May 2022 - April 2024</p>
                 </div>
                 <ul class="list-disc ml-8 mt-2 text-gray-700">
-                    <li>Performed manual testing of websites and apps, ensuring functional accuracy.</li>
-                    <li>Reduced production bugs by 30% through comprehensive test plans.</li>
-                    <li>Used Jira and Agile methodologies to streamline QA processes.</li>
+                    <li>Manual testing of websites and apps.</li>
+                    <li>Gherkin language proficiency.</li>
+                    <li>Test Plans, Cases & Processes, Functional Requirements, Defect/Bug Tracking (JIRA).</li>
+                    <li>Execution of test cases and regression testing.</li>
+                    <li>Experience with POSTMAN APIs and Cypress for automation.</li>
+                    <li>Agile methodologies.</li>
                 </ul>
             </div>
 
@@ -98,8 +133,22 @@
                     <p class="text-gray-600">2018 - 2020</p>
                 </div>
                 <ul class="list-disc ml-8 mt-2 text-gray-700">
-                    <li>Provided remote and on-site support to resolve hardware and software issues.</li>
-                    <li>Installed and configured network infrastructure in educational institutions.</li>
+                    <li>Customer support for IT troubleshooting both remotely and on-site.</li>
+                    <li>Hardware and software problem resolution.</li>
+                    <li>Installation, setup, and network configuration for educational institutions.</li>
+                </ul>
+            </div>
+
+            <!-- Reballing Science -->
+            <div class="mb-6">
+                <div class="flex justify-between">
+                    <h3 class="text-xl font-bold text-gray-800">Manager & IT Technician – Reballing Science</h3>
+                    <p class="text-gray-600">2014 - 2016</p>
+                </div>
+                <ul class="list-disc ml-8 mt-2 text-gray-700">
+                    <li>Updated laptops (software and hardware).</li>
+                    <li>Formatted and installed complete IT systems (drivers, OS).</li>
+                    <li>Customer support, hardware and software assembly.</li>
                 </ul>
             </div>
         </div>
@@ -150,7 +199,7 @@
 
     <!-- Button to Export to PDF -->
     <div class="text-center mt-10">
-        <button id="export-btn" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mb-8" >
+        <button id="export-btn" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mb-8">
             Export to PDF
         </button>
     </div>
